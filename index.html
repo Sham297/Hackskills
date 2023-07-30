@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        /* Custom styles for the offcanvas */
+        @media (max-width: 767px) {
+          .offcanvas.show {
+            width: 50%; /* Adjust this value as needed to make the offcanvas smaller */
+          }
+            }  
+
+         @media (min-width: 767px ) {
+           .form-control:focus {
+        border-color: #00ff11;
+        box-shadow: 0px 1px 1px rgba(20, 158, 18, 0.075) inset, 0px 0px 10px rgba(30, 255, 0, 0.5);
+          }
+
+          .slide, .carousel-item{
+          height: 500px;
+          width: 1000px;
+          /* Change this value to your desired height */
+           }
+
+          }
+
+          /* Apply initial opacity of 0 to the welcome text */
+        .welcome-text {
+            opacity: 0;
+            }
+
+         /* Define the animation */
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+                }
+            to {
+                opacity: 2;
+                }
+        }
+
+        /* Apply the animation to the welcome text */
+            .welcome-text {
+             animation: fadeInAnimation 4s ease-in-out forwards; /* forwards keeps the final state after the animation ends */
+        }
+
+        .vstack{
+            font-size: larger;
+        }
+
+@media (max-width: 767px) {
+  #HeadingMobile {
+    font-size: 1.5rem !important; /* Adjust the font size as needed */
+  }
+
+  #ParaMobile {
+    font-size: 1.2rem !important;
+    padding-top: 2px !important;
+  }
+
+  #FeatMobile {
+    padding: 25px;
+    font-size: 18px;
+
+  }
+
+  #ParaMobile1 {
+    font-size: 1.2rem !important;
+    padding-top: 3 px !important;
+  }
+
+  #butt1 {
+    padding-top: 2px !important;
+  }
+
+}
+
+
+
+            
+    </style>
+</head>
+
+<body class="text-bg-dark">
+
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-black " id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><span class="text-success">Hack</span> Skills</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Shortcuts</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid pt-5">
+        <p class="text-center text-light fs-1 pt-5 welcome-text">Welcome <span class="text-success" >Mates !</span></p>
+    </div>
+
+    <div class="container-fluid pt-5">
+            <div class="p-2">
+                <p class="fs-2 text-center text-lg-start" id="HeadingMobile">What's <span class="text-success">Hack</span> Skills ?</p>
+
+                <p class="fs-4 pt-3 ms-4 " id="ParaMobile">
+                Welcome to Hack Skills, your ultimate destination for mastering the essential skills 
+                    needed for placement success in the competitive world of engineering! Our mission is crystal clear - 
+                    to empower students like you to land your dream job at your dream company.<span class="d-none d-sm-none d-lg-inline">In today's fast-paced and competitive job market, securing a placement in your dream company is no easy feat.
+                     That's where Hack Skills comes in to bridge the gap between your aspirations and achievements.
+                      We understand the significance of placements in shaping your future, and we are committed to 
+                      equipping you with the knowledge, expertise, and confidence needed to stand out from the crowd.</span> </p>
+            </div>
+    </div>
+
+    <div class="container-fluid pt-5 text-center">
+
+            <div class="p-2">
+                <p class="fs-2 text-center text-lg-start" id="HeadingMobile">What Are The <span class="text-success" >Features ?</span></p>
+                <div class="vstack gap-3 pt-3 " id="FeatMobile">
+                    <div class="border border-success p-2 mb-2 ">Student-Centric Design</div>
+                    <div class="border border-success p-2 mb-2 ">Soft Skills Enhancement</div>
+                    <div class="border border-success p-2 mb-2 border-opacity-50">Technical Interview Preparation </div>
+                    <div class="border border-success p-2 mb-2 border-opacity-75">Thriving Community</div>
+                    <div class="border border-success p-2 mb-2">Company-Specific Guidance</div>
+                </div>
+            </div>   
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="p-2">
+            <p class="fs-2 text-center text-lg-start" id="HeadingMobile">Why <span class="text-success" >Placement</span> Training Matters ?</p>
+            <p class="fs-4 pt-3 ms-4" id="ParaMobile">Mastering placement training is of utmost importance for students venturing into the highly
+                 competitive job market. In the dynamic landscape of today's world, securing a coveted position in your dream company
+                  demands more than just luck.<span class="d-none d-sm-none d-lg-inline">It necessitates a well-rounded and effective approach to preparation. 
+                  This is where Hack Skills steps in with its unwavering commitment to your success.Our mission revolves
+                   around empowering you with the indispensable skills and knowledge required for a triumphant placement journey. 
+                   Through our comprehensive training programs, expert guidance, and personalized mentorship, we strive to pave the way 
+                   for your extraordinary achievements, helping you shine brightly in the job market.</span></p>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="p-2">
+            <p class="fs-2 text-center text-lg-start" id="HeadingMobile">Try Out Our <span class="text-success" >Resume</span> Builder !</p>
+            <p class="fs-4 pt-3 ms-4" id="ParaMobile"><button type="button" class="btn btn-outline-success">Pro CV</button> is the perfect tool to craft a standout resume that highlights your skills, 
+                experiences, and achievements. With its user-friendly interface and customizable templates, creating a professional
+                 resume has never been easier.<span class="d-none d-sm-none d-lg-inline">Whether you are a fresh graduate or an experienced professional, our Resume Builder guides
+                  you through the process step-by-step, ensuring that your resume is tailored to your unique profile. Impress recruiters 
+                  with a polished and well-organized resume that showcases your potential and increases your chances of landing your dream job. 
+                  Try out our Resume Builder today and take the first step towards a successful career!</span>  </p>
+
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="p-2">
+            <p class="fs-2 text-center text-lg-start" id="HeadingMobile">Our <span class="text-success" >Alumni's </span>Testimonials ! </p>
+            <p class="fs-4 pt-3 ms-4">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="images\cs1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/cs2.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/cs3.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="p-2">
+            <p class="fs-2 text-center text-lg-start" id="HeadingMobile">Discover Our Mate's <span class="text-success" >Blogs !</span></p>
+            <p class="fs-4 pt-3 ms-4" id="ParaMobile"> A collection of inspiring stories and experiences shared by our 
+                fellow students. From learning new skills to facing interview challenges, these <a href="#" class="link-success link-offset-2 link-underline-opacity-100 link-underline-opacity-100-hover">Blogs </a>offer practical advice and
+                 motivation for your own journey. <span class="d-none d-sm-none d-lg-inline">Don't hesitate to dive in and gain valuable insights from your peers.
+                  Their words will guide you as you prepare for placements and pursue your dreams. Learn from their successes
+                   and setbacks, and let their wisdom empower you to shine in the competitive job market. Unlock the secrets of
+                    success through the eyes of those who have walked the path before you. Happy reading! </span></p>
+                
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+        <div class="p-2">
+            <p class="fs-2 text-center text-lg-start" id="HeadingMobile"><span class="text-success" >Contact</span> and Support </p>
+            <div class="container d-sm-inline d-lg-none pt-4">
+              <div class="container text-center">
+                <div class="row row-cols-2">
+
+                  <div class="col">             
+                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#198754" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                  </svg>
+                </div>
+
+                  <div class="col"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#198754" class="bi bi-discord" viewBox="0 0 16 16">
+                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                  </svg></div>
+                  <div class="col pt-5"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#198754" class="bi bi-telegram" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                  </svg></div>
+                  <div class="col pt-5"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#198754" class="bi bi-slack" viewBox="0 0 16 16">
+                    <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+                  </svg></div>
+                </div>
+              </div>
+
+
+          </div>
+          <p class="fs-4 pt-3 ms-4 d-none d-lg-block" id="ParaMobile1"> Join our community of college mates for exclusive placement training resources
+             and expert guidance. Find us on the Contact page to get started!</p>
+                <p class="fs-4 pt-3 ms-4  d-none d-lg-block" id="ParaMobile1">  Get all your placement-related questions answered in our FAQ section,
+                   and boost your confidence for interviews and assessments. Reach out to our team for personalized support. Success awaits!</p>  
+        </div>
+    </div>
+
+    <div class="container-fluid pt-5">
+      <div class="p-2">
+          <p class="fs-2 text-center text-lg-start" id="HeadingMobile">Nothing<span class="text-success" > Here </span></p>
+          <p class="fs-4 pt-3 ms-4" id="ParaMobile">Don't worry, we've got you covered – simply click that "Jump to Top" button 
+            below this sentence and prepare to embark on a thrilling exploration of the navigation bar.<span class="d-none d-lg-inline">You'll find a treasure 
+            trove of goodies to aid you on your journey to greatness. We're absolutely thrilled to be part of this adventure
+             with you! Happy exploring! And guess what? The fun doesn't stop here. We'll be updating and adding more valuable 
+             content regularly, so make sure to bookmark this page and keep coming back for more placement triumphs.</span> </p>
+              
+      </div>
+  </div>
+
+  <div class="container pt-4" id="butt1">
+    <div class="d-grid col-6 mx-auto">
+      <a class="btn btn-outline-success" href="#">Jump To Top</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>
+      <br>
+      <br>
+  
+      
+    </p>
+  </div>
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"> </script>
+    
+</body>
+</html>
